@@ -12,7 +12,7 @@ contents.forEach((val, i) => {
 const delay = (time) => time * 1000;
 
 const delayPromises = (delayTime) => {
-  const promises = contents.map((val) => {
+  return contents.map((val) => {
     return () => {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -24,13 +24,9 @@ const delayPromises = (delayTime) => {
         reject(err);
       });
     };
-  });
-
-  const sequentialProcess = promises.reduce((pre, cur) => {
+  }).reduce((pre, cur) => {
     return pre.then(cur);
   }, Promise.resolve());
-
-  return sequentialProcess;
 };
 
 const btn = document.getElementById('js-btn');
