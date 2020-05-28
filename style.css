@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+
+.wrapper {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contents {
+  min-height: 700px;
+  position: relative;
+}
+
+.content {
+  height: 100px;
+  width: 100px;
+  border: 1px solid #222;
+  position: absolute;
+}
+
+.slide-animation {
+  animation: slide 2s linear;
+}
+
+.content:first-child {
+  margin-top: 0;
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
