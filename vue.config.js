@@ -1,6 +1,6 @@
 module.exports = {
   publicPath: '/promise-lesson',
-  outputDir: 'docs',
+  outputDir: 'dist',
   filenameHashing: false,
   productionSourceMap: false,
 }
